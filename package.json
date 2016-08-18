@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "ES6 dependency injection container",
   "author": "Dawid Rusnak <dawid@drcode.pl>",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "eslint src && mocha ./tests",
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- ./tests && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
@@ -15,9 +15,6 @@
     "di",
     "container",
     "easen"
-  ],
-  "ignore": [
-    "coverage"
   ],
   "homepage": "https://github.com/rangoo94/easen-di",
   "bugs": "https://github.com/rangoo94/easen-di/issues",
