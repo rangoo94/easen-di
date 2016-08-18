@@ -1,0 +1,41 @@
+{
+  "name": "easen-di",
+  "version": "0.1.0",
+  "description": "ES6 dependency injection container",
+  "author": "Dawid Rusnak <dawid@drcode.pl>",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint src && mocha ./tests",
+    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- ./tests && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "keywords": [
+    "dependency",
+    "injection",
+    "inject",
+    "di",
+    "container",
+    "easen"
+  ],
+  "ignore": [
+    "coverage"
+  ],
+  "homepage": "https://github.com/rangoo94/easen-di",
+  "bugs": "https://github.com/rangoo94/easen-di/issues",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rangoo94/easen-di.git"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.11.12",
+    "eslint": "^3.3.1",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "expect.js": "^0.3.1",
+    "istanbul": "^0.4.4",
+    "mocha": "^3.0.2"
+  }
+}
