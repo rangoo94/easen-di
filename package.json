@@ -18,7 +18,6 @@
   ],
   "homepage": "https://github.com/rangoo94/easen-di",
   "bugs": "https://github.com/rangoo94/easen-di/issues",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/rangoo94/easen-di.git"
