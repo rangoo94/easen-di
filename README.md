@@ -3,7 +3,7 @@ Easen DI
 
 [![Travis](https://travis-ci.org/rangoo94/easen-di.svg)](https://travis-ci.org/rangoo94/easen-di)
 [![Code Climate](https://codeclimate.com/github/rangoo94/easen-di/badges/gpa.svg)](https://codeclimate.com/github/rangoo94/easen-di)
-[![Coverage Status](https://coveralls.io/repos/rangoo94/easen-di/badge.svg)](https://coveralls.io/r/rangoo94/easen-di)
+[![Coverage Status](https://coveralls.io/repos/github/rangoo94/easen-di/badge.svg?branch=master)](https://coveralls.io/github/rangoo94/easen-di?branch=master)
 
 It's a dependency injection container which requires ES6 (because of [Proxy](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy) as safe way to provide services).
 It handles properly circular dependencies.
