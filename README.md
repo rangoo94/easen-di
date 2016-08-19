@@ -50,6 +50,9 @@ Getter is preferred for external services, as it can't be mutated and can be jus
 It makes very simple to test functions as they are not dependent on DI container:
 
 ```
+const container = new Di()
+container.register('environment', 'production')
+
 function createLogMethod({ environment }) {
    if (environment !== 'production') {
      return (...args) => console.log(...args)
@@ -59,15 +62,15 @@ function createLogMethod({ environment }) {
 }
 
 // Without DI
-let log = createLogMethod({ environment: 'production' })
+const log = createLogMethod({ environment: 'production' })
 log('something')
 
 // With DI
-let log = createLogMethod(container.getter)
+const log = createLogMethod(container.getter)
 log('something')
 
 // As a DI service
-container.factory(createLogMethod)
+container.factory('log', createLogMethod)
 container.getter.log('something')
 ```
 
