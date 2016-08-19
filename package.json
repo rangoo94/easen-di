@@ -1,6 +1,6 @@
 {
   "name": "easen-di",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ES6 dependency injection container",
   "author": "Dawid Rusnak <dawid@drcode.pl>",
   "main": "src/index.js",
