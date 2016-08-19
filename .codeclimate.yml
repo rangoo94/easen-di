@@ -2,3 +2,8 @@ engines:
   eslint:
     enabled: true
     channel: "eslint-2"
+ratings:
+  paths:
+  - "**.js"
+exclude_paths:
+- tests/
