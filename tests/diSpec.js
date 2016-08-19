@@ -19,7 +19,7 @@ describe('EasenDI', () => {
   })
 
   it('should disallow creating factory when it\'s not a function', () => {
-    expect(() => di.factory('not a function')).to.throwError()
+    expect(() => di.factory('name', 'not a function')).to.throwError()
   })
 
   it('should throw error when getting unknown service', () => {
