@@ -1,4 +1,5 @@
 const createProxy = require('./create-proxy')
+const findAlternatives = require('find-alternatives')
 
 /**
  * @var {function} getter
@@ -50,7 +51,14 @@ class EasenDi {
    */
   get(name) {
     if (!this.factories.hasOwnProperty(name)) {
-      throw new ReferenceError(`Injector |${name}| not found.`)
+      if (process.env.NODE_ENV !== 'production') {
+        const alternatives = findAlternatives(name, Object.keys(this.factories))
+
+        if (alternatives.length) {
+          throw new ReferenceError(`Factory |${name}| not found. Did you meant: ${alternatives.join(', ')}?`)
+        }
+      }
+      throw new ReferenceError(`Factory |${name}| not found.`)
     }
 
     // If this dependency is already accessed, throw circular dependency error

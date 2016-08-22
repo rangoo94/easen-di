@@ -1,6 +1,6 @@
 {
   "name": "easen-di",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ES6 dependency injection container",
   "author": "Dawid Rusnak <dawid@drcode.pl>",
   "main": "src/index.js",
@@ -23,7 +23,9 @@
     "url": "https://github.com/rangoo94/easen-di.git"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "find-alternatives": "^1.0.1"
+  },
   "devDependencies": {
     "coveralls": "^2.11.12",
     "eslint": "^3.3.1",

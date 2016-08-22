@@ -128,4 +128,28 @@ describe('EasenDI', () => {
     expect(() => di.get('constant')).not.to.throwException(/\|constant -> constant2 -> constant\|/)
     expect(() => di.get('constant')).to.throwException(/\|constant\|/)
   })
+
+  it('should show similar factories for misspelled name on development mode', () => {
+    di.register('model', 'something')
+    di.register('model2', 'something')
+    di.register('constant', 'something')
+
+    process.env.NODE_ENV = 'development'
+
+    expect(() => di.get('mode')).to.throwException(/Did you meant: model, model2/)
+    expect(() => di.get('constanten')).to.throwException(/Did you meant: constant/)
+    expect(() => di.get('different')).not.to.throwException(/Did you meant/)
+  })
+
+  it('should not show similar factories for misspelled name on production mode', () => {
+    di.register('model', 'something')
+    di.register('model2', 'something')
+    di.register('constant', 'something')
+
+    process.env.NODE_ENV = 'production'
+
+    expect(() => di.get('mode')).not.to.throwException(/Did you meant: model, model2/)
+    expect(() => di.get('constanten')).not.to.throwException(/Did you meant: constant/)
+    expect(() => di.get('different')).not.to.throwException(/Did you meant/)
+  })
 })
